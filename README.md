@@ -14,9 +14,9 @@ The platform provides a seamless experience for buyers, owners, and agents to in
 - JavaScript
 
 ### Backend
-- ASP.NET Core (Microservices / REST APIs)
-- Spring Boot (Java-based backend services)
-- J2EE (Enterprise application components)
+- **Technology:** .NET
+- **Language:** C#
+- **Frameworks/Packages:** ASP.NET Core, Entity Framework, etc.
 
 ### Database
 - MySQL
