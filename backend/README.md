@@ -3,10 +3,9 @@
 This folder contains the backend implementation for the Real Estate Listing Platform.
 
 ## Technologies Used
-- ASP.NET
-- Spring Boot
-- J2EE
-- REST APIs
+- **Technology:** .NET
+- **Language:** C# 
+- **Frameworks/Packages:** ASP.NET Core, Entity Framework, etc.
 
 ## Responsibilities
 - User authentication & authorization
