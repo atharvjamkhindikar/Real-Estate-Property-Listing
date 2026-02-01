@@ -10,7 +10,7 @@ The platform provides a seamless experience for buyers, owners, and agents to in
 ### Frontend
 - React.js
 - HTML5
-- CSS3
+- CSS3 
 - JavaScript
 
 ### Backend
