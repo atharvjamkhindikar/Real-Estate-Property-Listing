@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { propertyService } from '../services/api';
-import PropertyCard from './PropertyCard';
+import { propertyService } from '../../services/api';
+import PropertyCard from '../property/PropertyCard';
 import './AdvancedSearch.css';
 
 const AdvancedSearch = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { builderGroupService } from '../services/api';
-import PropertyCard from './PropertyCard';
-import { useAuth } from '../context/AuthContext';
+import { builderGroupService } from '../../services/api';
+import PropertyCard from '../property/PropertyCard';
+import { useAuth } from '../../context/AuthContext';
 import './BuilderGroupFilter.css';
 
 const BuilderGroupFilter = () => {

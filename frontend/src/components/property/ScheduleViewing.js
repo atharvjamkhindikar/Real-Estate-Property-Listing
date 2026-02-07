@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { scheduleViewingService, propertyService } from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { scheduleViewingService, propertyService } from '../../services/api';
+import { useAuth } from '../../context/AuthContext';
 import './ScheduleViewing.css';
 
 const ScheduleViewing = () => {

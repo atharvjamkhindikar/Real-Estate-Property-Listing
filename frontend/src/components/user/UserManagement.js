@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { userService } from '../services/api';
+import { userService } from '../../services/api';
 import './UserManagement.css';
 
 const UserManagement = () => {

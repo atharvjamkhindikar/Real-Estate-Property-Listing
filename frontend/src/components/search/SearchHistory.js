@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { searchHistoryService } from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { searchHistoryService } from '../../services/api';
+import { useAuth } from '../../context/AuthContext';
 import './SearchHistory.css';
 
 const SearchHistory = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { propertyImageService, propertyService } from '../services/api';
+import { propertyImageService, propertyService } from '../../services/api';
 import './PropertyImages.css';
 
 const PropertyImages = () => {

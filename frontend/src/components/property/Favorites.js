@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { favoriteService } from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { favoriteService } from '../../services/api';
+import { useAuth } from '../../context/AuthContext';
 import PropertyCard from './PropertyCard';
 import './Favorites.css';
 

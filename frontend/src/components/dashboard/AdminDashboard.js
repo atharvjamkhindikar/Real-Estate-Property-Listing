@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { propertyService } from '../services/api';
+import { propertyService } from '../../services/api';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {

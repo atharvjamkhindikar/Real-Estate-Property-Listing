@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { subscriptionService } from '../services/api';
+import { subscriptionService } from '../../services/api';
 import './SubscriptionManagement.css';
 
 const SubscriptionManagement = () => {
