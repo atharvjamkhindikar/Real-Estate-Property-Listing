@@ -51,16 +51,16 @@ public class User {
     
     @NotNull(message = "User type is required")
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50) // ADDED length = 50
     private UserType userType;
     
     @NotNull(message = "Role is required")
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50) // ADDED length = 50
     private Role role = Role.USER;
     
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50) // ADDED length = 50
     private SubscriptionType subscriptionType = SubscriptionType.FREE;
     
     private String company;

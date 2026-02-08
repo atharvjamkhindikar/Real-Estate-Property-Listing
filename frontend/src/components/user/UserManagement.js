@@ -14,17 +14,17 @@ const UserManagement = () => {
     const [editingUserId, setEditingUserId] = useState(null);
 
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        phone: '',
-        userType: 'CUSTOMER',
-        company: '',
-        licenseNumber: '',
-        bio: '',
-        role: 'USER'
-    });
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    phone: '',
+    userType: 'BUYER', // Updated to match Enum
+    company: '',
+    licenseNumber: '',
+    bio: '',
+    role: 'USER'
+});
 
     // Fetch users with pagination and filters
     const fetchUsers = useCallback(async () => {
@@ -94,22 +94,22 @@ const UserManagement = () => {
     };
 
     const handleEdit = (user) => {
-        setEditingUserId(user.id);
-        setFormData({
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            phone: user.phone || '',
-            password: '',
-            userType: user.userType || 'CUSTOMER',
-            company: user.company || '',
-            licenseNumber: user.licenseNumber || '',
-            bio: user.bio || '',
-            role: user.role || 'USER'
-        });
-        setShowCreateForm(true);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    setEditingUserId(user.id);
+    setFormData({
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        phone: user.phone || '',
+        password: '',
+        userType: user.userType || 'BUYER', 
+        company: user.company || '',
+        licenseNumber: user.licenseNumber || '',
+        bio: user.bio || '',
+        role: user.role || 'USER'
+    });
+    setShowCreateForm(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure you want to delete this user?')) {
@@ -152,21 +152,21 @@ const UserManagement = () => {
     };
 
     const resetForm = () => {
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            password: '',
-            userType: 'CUSTOMER',
-            company: '',
-            licenseNumber: '',
-            bio: '',
-            role: 'USER'
-        });
-        setEditingUserId(null);
-        setError(null);
-    };
+    setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        password: '',
+        userType: 'BUYER', 
+        company: '',
+        licenseNumber: '',
+        bio: '',
+        role: 'USER'
+    });
+    setEditingUserId(null);
+    setError(null);
+};
 
     if (loading) {
         return <div className="loading">Loading users...</div>;
@@ -362,9 +362,10 @@ const UserManagement = () => {
                                         onChange={handleInputChange}
                                         required
                                     >
-                                        <option value="CUSTOMER">Customer</option>
-                                        <option value="AGENT">Agent</option>
-                                        <option value="ADMIN">Admin</option>
+                                            <option value="BUYER">Customer</option>
+                                            <option value="AGENT">Agent</option>
+                                            <option value="OWNER">Owner</option>
+                                            <option value="ADMIN">Admin</option>
                                     </select>
                                 </div>
                             </div>

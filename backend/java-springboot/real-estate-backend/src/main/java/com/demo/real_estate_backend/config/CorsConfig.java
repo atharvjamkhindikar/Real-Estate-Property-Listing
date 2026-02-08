@@ -16,11 +16,9 @@ public class CorsConfig {
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-//                                "http://localhost:3000", "http://localhost:3001",
-//                                       "http://ec2-3-91-60-245.compute-1.amazonaws.com",
-                                "http://realestate-frontend.s3-website-us-east-1.amazonaws.com/"
-//                                "http://13.220.57.64:8080",
-//                                "http://13.220.57.64"
+                                "http://localhost:3000", 
+                                "http://localhost:3001",
+                                "http://realestate-frontend.s3-website-us-east-1.amazonaws.com"
                         )
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

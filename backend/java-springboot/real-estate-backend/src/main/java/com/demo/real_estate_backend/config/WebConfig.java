@@ -4,25 +4,37 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * Web configuration for the Real Estate application.
- * Handles CORS for both local development and EC2 deployment.
- */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                // Local development origins
+
+                // Allow local React app (DEV)
+                // Allow deployed frontend (PROD)
                 .allowedOrigins(
-                    // EC2 production
-//                    "http://ec2-13-220-57-64.compute-1.amazonaws.com"
+                        "http://localhost:3000",
                         "http://realestate-frontend.s3-website-us-east-1.amazonaws.com"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+
+                // Explicitly allow all HTTP methods you use
+                .allowedMethods(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "PATCH",
+                        "OPTIONS"
+                )
+
+                // Allow all headers (Authorization, Content-Type, etc.)
                 .allowedHeaders("*")
+
+                // Allow cookies / Authorization headers
                 .allowCredentials(true)
+
+                // Cache preflight response (performance improvement)
                 .maxAge(3600);
     }
 }
