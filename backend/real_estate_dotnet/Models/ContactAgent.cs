@@ -2,8 +2,10 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
 
-namespace RealEstate.Models
+namespace real_estate_dotnet.Models
 {
     [Table("contact_agents")]
     public class ContactAgent

@@ -2,8 +2,12 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace RealEstate.Model
+
+namespace real_estate_dotnet.Models
 {
     [Table("search_history")]
     [Index(nameof(UserId), Name = "idx_search_user")]

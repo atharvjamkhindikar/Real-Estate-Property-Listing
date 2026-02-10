@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
 
-namespace RealEstate.Models
+namespace real_estate_dotnet.Models
 {
     [Table("users")]
     public class User
@@ -35,9 +37,9 @@ namespace RealEstate.Models
         public UserType UserType { get; set; }
 
         [Required]
-        public Role Role { get; set; } = Role.USER;
+        public Role Role { get; set; } = Role.User;
 
-        public SubscriptionType SubscriptionType { get; set; } = SubscriptionType.FREE;
+        public SubscriptionType SubscriptionType { get; set; } = SubscriptionType.Free;
 
         public string? Company { get; set; }
 

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using RealEstate.Models.Enums;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
 
-namespace RealEstate.Models
+
+
+namespace real_estate_dotnet.Models
 {
     [Table("properties")]
     public class Property

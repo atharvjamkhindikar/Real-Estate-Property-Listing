@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
 
-namespace RealEstate.Models
+
+namespace real_estate_dotnet.Models
 {
     [Table("builder_groups")]
     public class BuilderGroup

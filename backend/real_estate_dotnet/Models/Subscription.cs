@@ -2,8 +2,10 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using real_estate_dotnet.Models.Enums;
+using real_estate_dotnet.Models;
 
-namespace RealEstate.Model
+namespace real_estate_dotnet.Models
 {
     [Table("subscriptions")]
     public class Subscription
